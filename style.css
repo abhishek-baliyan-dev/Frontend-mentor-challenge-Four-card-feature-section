@@ -1,0 +1,119 @@
+:root {
+    /* Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*,*:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-Light-Gray);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 350px;
+    padding: 3rem 1.7rem;
+}
+
+.heading {
+    text-align: center;
+}
+
+.light-heading {
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+}
+
+.heading p {
+    margin: 0.7rem 0;
+    color: var(--Grayish-Blue);
+}
+
+.card-wrapper {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.card {
+    background-color: white;
+    border-top: 3px solid var(--Cyan);
+    border-radius: 5px;
+    padding: 1.3rem 1.5rem;
+    box-shadow: 0px 3px 7px -2px var(--Very-Dark-Blue);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.card p {
+    color: var(--Grayish-Blue);
+    font-size: 0.8rem;
+}
+
+.card .card-icon {
+    margin-top: 2rem;
+    text-align: end;
+}
+
+.card-icon img {
+    width: 50px;
+    height: auto;
+}
+
+.border-red {
+    border-color: var(--Red);
+}
+
+.border-orange {
+    border-color: var(--Orange);
+}
+
+.border-blue {
+    border-color: var(--Blue);
+}
+
+.card-column-desktop {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        max-width: 66rem;
+    }
+
+    .heading p {
+        margin: 0.7rem 15rem;
+    }
+
+    .card-wrapper {
+        gap: 1.5rem;
+        align-items: center;
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(252px, 1fr)); */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
